@@ -20,7 +20,7 @@ def anagram1(str1, str2):
             count[letter] = 1
 
     for k in count:
-        if count[k] != 0
+        if count[k] != 0:
             return False
 
     return True
