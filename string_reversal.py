@@ -8,4 +8,10 @@ def ref_str(str):
                 i += 1
             output.append(str[first_char:i])
         i +=1
-    return " ".join(reversed(output))
+
+    final_output = ""
+
+    for ind,ele in enumerate(output):
+        final_output += output[len(output) - 1 -ind]
+        final_output += ' '
+    print(final_output)
