@@ -11,7 +11,7 @@ def ref_str(str):
 
     final_output = ""
 
-    for ind,ele in enumerate(output):
-        final_output += output[len(output) - 1 -ind]
+    for value in output[::-1]:
+        final_output += element
         final_output += ' '
     print(final_output)
