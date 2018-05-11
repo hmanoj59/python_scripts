@@ -48,7 +48,18 @@ def finder(s1,s2):
 #     print(output)
 finder([1,2,3,4,5,6,7],[3,7,2,1,4,6])
 
-
+def finder2(arr1,arr2):
+    import collections
+    val = {}
+    d = collections.defaultdict(int)
+    for ele in arr2:
+        d[ele] += 1
+    for ele in arr1:
+        if d[ele] == 0:
+            return ele
+        else:
+            d[ele] -= 1
+            
 def finder1(arr1,arr2):
     arr1.sort()
     arr2.sort()
