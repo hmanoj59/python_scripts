@@ -27,7 +27,7 @@ def pair_sum(s1,s2):
         val = s2 - ele
         if val not in seen:
             seen.add(val)
-        else:    
+        else:
             output.add((val,ele))
     print(output)
 pair_sum([1,3,2,2],4)
@@ -39,10 +39,21 @@ def finder(s1,s2):
 #             print(ele)
     output = collections.defaultdict(int)
     for ele in s2:
-        output[ele] += 1    
+        output[ele] += 1
     for ele in s1:
         if output[ele] == 0:
             return ele
         else:
             output[ele] -= 1
-#     print(output) 
+#     print(output)
+finder([1,2,3,4,5,6,7],[3,7,2,1,4,6])
+
+
+def finder1(arr1,arr2):
+    arr1.sort()
+    arr2.sort()
+    for num1, num2 in zip(arr1,arr2):
+        if num1!= num2:
+            return num1
+    return arr1[-1]
+finder1([1,2,3,4,5,6,7],[3,7,2,1,4,6])
