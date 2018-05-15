@@ -95,4 +95,14 @@ def compress(s):
         i += 1
     output = output + s[i-1] + str(count)
     return output
-compress(' AAAAABBBBCCCC')    
+compress(' AAAAABBBBCCCC')
+def uniq(s):
+#     return len(set(s)) == len(s)
+    output = set()
+    for ele in s:
+        if ele in output:
+            return False
+        else:
+            output.add(ele)
+    return True
+uniq('abcdefg')    
