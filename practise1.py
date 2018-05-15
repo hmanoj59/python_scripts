@@ -80,3 +80,19 @@ def rev_word(s):
         i += 1
     return ' '.join(reversed(out))
 rev_word('go? to ready you are John, Hi')
+def compress(s):
+    if len(s) < 2:
+        return s + str(1)
+    output = ""
+    i = 0
+    count = 1
+    while i < len(s):
+        if s[i] == s[i-1]:
+            count += 1
+        else:
+            output = output + s[i-1] + str(count)
+            count = 1
+        i += 1
+    output = output + s[i-1] + str(count)
+    return output
+compress(' AAAAABBBBCCCC')    
