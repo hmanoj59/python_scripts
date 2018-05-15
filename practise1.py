@@ -59,7 +59,7 @@ def finder2(arr1,arr2):
             return ele
         else:
             d[ele] -= 1
-            
+
 def finder1(arr1,arr2):
     arr1.sort()
     arr2.sort()
@@ -68,3 +68,15 @@ def finder1(arr1,arr2):
             return num1
     return arr1[-1]
 finder1([1,2,3,4,5,6,7],[3,7,2,1,4,6])
+def rev_word(s):
+    out = []
+    i = 0
+    while i < len(s):
+        if s[i] != ' ':
+            start_ele = i
+            while i < len(s) and s[i] != ' ':
+                i += 1
+            out.append(s[start_ele:i])
+        i += 1
+    return ' '.join(reversed(out))
+rev_word('go? to ready you are John, Hi')
