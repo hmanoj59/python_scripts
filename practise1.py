@@ -114,4 +114,23 @@ def large_cont_sum(arr):
         current_sum = max(current_sum+ele,ele)
         max_sum = max(current_sum, max_sum)
     return max_sum
-large_cont_sum([1,2,-1,3,4,10,10,-10,-1])    
+large_cont_sum([1,2,-1,3,4,10,10,-10,-1])
+
+class stack():
+    def __init__(self):
+        self.items = []
+    def isempty(self):
+        return self.items == []
+    def push(self,item):
+        self.items.append(item)
+    def pop(self):
+        self.items.pop()
+    def size(self):
+        return len(self.items)
+s = stack()
+s.push(2)
+s.isempty()
+s.push(1)
+s.size()
+s.pop()
+s.pop()
