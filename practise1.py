@@ -155,3 +155,21 @@ s.size()
 s.pop()
 s.pop()
 s.pop()
+def balance_check(s):
+    opening = ['(','{','[']
+    matches = set([('(',')'),('{','}'),('[',']')])
+    output = []
+    if len(s)%2 != 0:
+        return False
+    for ele in s:
+        if ele in opening:
+            output.append(ele)
+        else:
+            last_ele = output.pop()
+            if ( last_ele,ele ) not in matches:
+                return False
+    return True
+
+
+
+balance_check('[](){([[[]]])}')    
