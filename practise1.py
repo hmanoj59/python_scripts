@@ -134,3 +134,24 @@ s.push(1)
 s.size()
 s.pop()
 s.pop()
+class queue():
+    def __init__(self):
+        self.items = []
+    def isempty(self):
+        return self.items == []
+    def push(self,item):
+        self.items.append(item)
+    def pop(self):
+        return self.items.pop(0)
+    def size(self):
+        return len(self.items)
+s = queue()
+s.isempty()
+s.push(1)
+s.push(2)
+s.push('three')
+s.isempty()
+s.size()
+s.pop()
+s.pop()
+s.pop()
