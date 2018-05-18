@@ -179,8 +179,13 @@ class circular_double_linked_list():
         self.nextnode = None
         self.previousnode = None
 a = circular_double_linked_list(1)
-b = circular_double_linked_list(2)        
+b = circular_double_linked_list(2)
 a.nextnode = b
 b.previousnode = a
 a.previousnode = b
 b.nextnode = a
+class Single_linked_list():
+    def __init__(self, item):
+        self.item = item
+        self.nextnode = None
+        
