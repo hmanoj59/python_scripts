@@ -203,4 +203,14 @@ def reverse(s):
     if len(s) <= 1:
         return s
     return reverse(s[1:]) + s[0]
-reverse('This is a test string')    
+reverse('This is a test string')
+def permute(s):
+    out = []
+    if len(s) <=1:
+        return s
+    else:
+        for ind, ele in enumerate(s):
+            for val in permute(s[:ind] + s[ind+1:]):
+                out += [ele + val]
+    return out
+permute('abc')    
