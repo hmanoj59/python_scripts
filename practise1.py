@@ -199,3 +199,8 @@ def cycle_check(node):
         if marker1 == marker2:
             return True
     return False
+def reverse(s):
+    if len(s) <= 1:
+        return s
+    return reverse(s[1:]) + s[0]
+reverse('This is a test string')    
