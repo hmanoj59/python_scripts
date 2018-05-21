@@ -188,6 +188,7 @@ class Single_linked_list():
     def __init__(self, item):
         self.item = item
         self.nextnode = None
+
 def cycle_check(node):
 ###Test to check if it is a circular linked list
     marker1 = node
@@ -199,11 +200,13 @@ def cycle_check(node):
         if marker1 == marker2:
             return True
     return False
+
 def reverse(s):
     if len(s) <= 1:
         return s
     return reverse(s[1:]) + s[0]
 reverse('This is a test string')
+
 def permute(s):
     out = []
     if len(s) <=1:
@@ -213,4 +216,11 @@ def permute(s):
             for val in permute(s[:ind] + s[ind+1:]):
                 out += [ele + val]
     return out
-permute('abc')    
+permute('abc')
+
+def fib_ite(s):
+    a,b = 0,1
+    for ele in range(s):
+        a,b = b, a+b
+    return a
+fib_ite(15)        
