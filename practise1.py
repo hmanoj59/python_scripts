@@ -96,6 +96,24 @@ def compress(s):
     output = output + s[i-1] + str(count)
     return output
 compress(' AAAAABBBBCCCC')
+import collections
+def compress2(s1):
+    if len(s1) <= 2:
+        return
+    count = collections.defaultdict(int)
+    out = ""
+
+    for ele in s1:
+        if ele in count:
+            count[ele] += 1
+        else:
+            count[ele] = 1
+    for ele in count:
+        out+=ele
+        out+= str(count[ele])
+    return out
+
+compress2('AAAAABBBBCCCCD')
 def uniq(s):
 #     return len(set(s)) == len(s)
     output = set()
@@ -223,4 +241,4 @@ def fib_ite(s):
     for ele in range(s):
         a,b = b, a+b
     return a
-fib_ite(15)        
+fib_ite(15)
