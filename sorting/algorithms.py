@@ -14,4 +14,14 @@ def binary_search(arr, ele):
             mid = mid - 1
         else:
             mid = mid + 1
-                    
+
+def bubble_sort(arr):
+    for ele in list(range(len(arr)-1,0,-1)):
+        for n in list(range(ele)):
+            if arr[n] > arr[n+1]:
+                temp_var = arr[n+1]
+                arr[n+1] = arr[n]
+                arr[n] = temp_var
+    return arr
+arr = [3,2,13,4,6,5,7,8,1,20]
+bubble_sort(arr)
